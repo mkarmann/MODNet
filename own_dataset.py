@@ -16,7 +16,6 @@ class MetaHumanHairMattingDataset(Dataset):
         self.resize = resize
         self.samples = pd.read_csv(os.path.join(path, 'samples.csv'), index_col='id')
         self.ids = list(self.samples.index)
-        print(self.samples.columns)
 
     def __len__(self):
         return len(self.samples)
